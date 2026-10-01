@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Alves Ceron Construções | São João do Ivaí - PR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            900: '#78350f',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-brand-500 rounded-xl flex items-center justify-center text-slate-900 font-extrabold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-hard-hat"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight block leading-tight">C Alves Ceron</span>
+                    <span class="text-xs text-brand-500 font-medium uppercase tracking-wider">Construções & Fundações</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#inicio" class="hover:text-brand-500 transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-brand-500 transition-colors">Sobre Nós</a>
+                <a href="#servicos" class="hover:text-brand-500 transition-colors">Serviços</a>
+                <a href="#orcamento" class="hover:text-brand-500 transition-colors">Orçamento Online</a>
+                <a href="#contato" class="hover:text-brand-500 transition-colors">Contato</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/5543999203034?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm flex items-center gap-2 shadow-lg shadow-emerald-600/25 transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> (43) 9 9920-3034
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl">
+            <a href="#inicio" class="block text-base font-medium hover:text-brand-500 transition-colors">Início</a>
+            <a href="#sobre" class="block text-base font-medium hover:text-brand-500 transition-colors">Sobre Nós</a>
+            <a href="#servicos" class="block text-base font-medium hover:text-brand-500 transition-colors">Serviços</a>
+            <a href="#orcamento" class="block text-base font-medium hover:text-brand-500 transition-colors">Orçamento Online</a>
+            <a href="#contato" class="block text-base font-medium hover:text-brand-500 transition-colors">Contato</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5543999203034?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp (43) 9 9920-3034
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center lg:text-left flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 text-brand-500 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-certificate"></i> Excelência em Construção Civil & Fundações
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Do alicerce ao acabamento, construímos <span class="text-brand-500 underline decoration-brand-500/40">o seu futuro.</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+                    Especialistas em prédios residenciais, comerciais, casas e perfuração de brocas para fundações em São João do Ivaí e região. Sob a liderança de Carlinho Ceron.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#orcamento" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-slate-950 px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-brand-500/20 flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5">
+                        <i class="fa-solid fa-calculator text-lg"></i> Solicitar Orçamento
+                    </a>
+                    <a href="https://wa.me/5543999203034?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20Carlinho%20Ceron." target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-emerald-600/20 flex items-center justify-center gap-3 transition-all hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Falar no WhatsApp
+                    </a>
+                </div>
+
+                <div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-800 text-left">
+                    <div>
+                        <span class="block text-2xl font-bold text-brand-500">+ Anos</span>
+                        <span class="text-xs text-slate-400">De Tradição e Confiança</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold text-brand-500">100%</span>
+                        <span class="text-xs text-slate-400">Compromisso com Prazo</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold text-brand-500">Região</span>
+                        <span class="text-xs text-slate-400">São João do Ivaí - PR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image / Visual Card -->
+            <div class="lg:w-1/2 w-full max-w-lg">
+                <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/60 rounded-3xl p-8 shadow-2xl overflow-hidden">
+                    <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-500/10 rounded-full blur-2xl"></div>
+                    
+                    <div class="relative z-10 space-y-6">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-500 text-xl font-bold">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">C Alves Ceron Construções</h3>
+                                    <p class="text-xs text-slate-400">Proprietário: Carlinho Ceron</p>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-xs px-3 py-1 rounded-full font-semibold border border-emerald-500/30">Atendimento Ativo</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/50 flex items-start gap-4">
+                                <div class="bg-brand-500 text-slate-950 p-2.5 rounded-xl mt-0.5">
+                                    <i class="fa-solid fa-drill text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Perfuração de Brocas</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Equipamentos próprios e especializados para fundações seguras e firmes.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/50 flex items-start gap-4">
+                                <div class="bg-brand-500 text-slate-950 p-2.5 rounded-xl mt-0.5">
+                                    <i class="fa-solid fa-house-chimney text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Casas e Construção Geral</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Execução completa de projetos residenciais com alto padrão de acabamento.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/50 flex items-start gap-4">
+                                <div class="bg-brand-500 text-slate-950 p-2.5 rounded-xl mt-0.5">
+                                    <i class="fa-solid fa-city text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Prédios Residenciais e Comerciais</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Infraestrutura robusta para grandes empreendimentos em São João do Ivaí.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#orcamento" class="block w-full py-3 bg-brand-500 hover:bg-brand-600 text-slate-950 text-center font-bold rounded-xl transition-all shadow-md">
+                                Faça sua Cotação Rápida
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-brand-200">
+                        <i class="fa-solid fa-shield-halved"></i> Sobre a Empresa
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Tradição, segurança e solidez em cada metro quadrado construído.
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Sediada em <strong class="text-slate-900">São João do Ivaí - PR</strong>, a <strong class="text-slate-900">C Alves Ceron Construções</strong> é referência na execução de obras de pequeno, médio e grande porte. Sob a liderança firme e experiente do proprietário <strong class="text-slate-900">Carlinho Ceron</strong>, nossa empresa construiu uma sólida reputação baseada na seriedade, cumprimento rigoroso de prazos e excelência técnica.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Contamos com equipe capacitada e maquinário adequado para atender desde a fundação inicial (perfuração de brocas) até a entrega final de residências, edifícios comerciais e prédios residenciais com total garantia de qualidade.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="text-brand-600 text-xl font-bold mb-1"><i class="fa-solid fa-location-dot"></i></div>
+                            <h4 class="font-bold text-slate-900 text-sm">Base em São João do Ivaí</h4>
+                            <p class="text-xs text-slate-500 mt-1">Atendimento ágil em toda a região e municípios vizinhos.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="text-brand-600 text-xl font-bold mb-1"><i class="fa-solid fa-user-tie"></i></div>
+                            <h4 class="font-bold text-slate-900 text-sm">Gestão Carlinho Ceron</h4>
+                            <p class="text-xs text-slate-500 mt-1">Acompanhamento direto e transparente em todas as etapas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative bg-slate-900 rounded-3xl p-8 lg:p-12 text-white shadow-2xl overflow-hidden">
+                        <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 space-y-6">
+                            <div class="w-16 h-16 bg-brand-500 text-slate-950 rounded-2xl flex items-center justify-center text-3xl font-bold shadow-lg">
+                                <i class="fa-solid fa-helmet-safety"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Por que escolher a C Alves Ceron?</h3>
+                            <ul class="space-y-4 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-brand-500 mt-1 text-base"></i>
+                                    <span><strong>Fundações Seguras:</strong> Perfuração precisa de brocas para garantir estabilidade estrutural desde a base.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-brand-500 mt-1 text-base"></i>
+                                    <span><strong>Mão de Obra Qualificada:</strong> Profissionais experientes em alvenaria, concreto armado e acabamentos.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-brand-500 mt-1 text-base"></i>
+                                    <span><strong>Compromisso com Prazos:</strong> Cronograma de obra respeitado do início à entrega das chaves.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-brand-500 mt-1 text-base"></i>
+                                    <span><strong>Orçamento Transparente:</strong> Cotações detalhadas sob medida para a sua necessidade.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-500/10 text-brand-700 border border-brand-500/30 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    Nossas Especialidades
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Soluções completas para a sua construção
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Da fundação subterrânea à torre comercial, oferecemos estrutura completa com maquinário de ponta e equipe especializada.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 bg-brand-500/10 group-hover:bg-brand-500 text-brand-600 group-hover:text-slate-950 rounded-2xl flex items-center justify-center text-2xl font-bold transition-colors">
+                            <i class="fa-solid fa-drill"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Perfuração de Brocas para Fundações</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Serviço especializado em perfuração de solo para fundações profundas e rasas. Essencial para garantir a sustentação e estabilidade de qualquer tipo de obra com total precisão.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">Fundações & Brocas</span>
+                        <a href="#orcamento" class="text-sm font-bold text-slate-900 group-hover:text-brand-600 flex items-center gap-1 transition-colors">
+                            Cotar Serviço <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 bg-brand-500/10 group-hover:bg-brand-500 text-brand-600 group-hover:text-slate-950 rounded-2xl flex items-center justify-center text-2xl font-bold transition-colors">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Casas e Construção em Geral</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Construção residencial completa, reformas e ampliações. Cuidamos de todas as etapas: alvenaria, estrutura, telhado, revestimentos e acabamentos finais.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">Residencial</span>
+                        <a href="#orcamento" class="text-sm font-bold text-slate-900 group-hover:text-brand-600 flex items-center gap-1 transition-colors">
+                            Cotar Serviço <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 bg-brand-500/10 group-hover:bg-brand-500 text-brand-600 group-hover:text-slate-950 rounded-2xl flex items-center justify-center text-2xl font-bold transition-colors">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Prédios Residenciais e Comerciais</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Execução de edifícios de múltiplos pavimentos e complexos comerciais. Engenharia estrutural robusta, planejamento logístico e cumprimento rigoroso das normas técnicas.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">Grandes Obras</span>
+                        <a href="#orcamento" class="text-sm font-bold text-slate-900 group-hover:text-brand-600 flex items-center gap-1 transition-colors">
+                            Cotar Serviço <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="orcamento" class="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+        <div class="absolute -left-32 top-1/2 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -right-32 bottom-0 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 space-y-4">
+                <span class="bg-brand-500/10 text-brand-500 border border-brand-500/30 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    Orçamento Inteligente
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    Solicite sua Cotação com o Carlinho Ceron
+                </h2>
+                <p class="text-slate-300 text-base max-w-2xl mx-auto">
+                    Preencha os dados abaixo com as informações da sua obra (município, brocas, dimensões e data). O sistema gerará a mensagem perfeita para envio instantâneo via WhatsApp!
+                </p>
+            </div>
+
+            <div class="bg-slate-800/90 border border-slate-700/80 rounded-3xl p-8 sm:p-10 shadow-2xl">
+                <form id="quoteForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Seu Nome *</label>
+                            <input type="text" id="clientName" required placeholder="Ex: João da Silva" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Seu Telefone / WhatsApp *</label>
+                            <input type="text" id="clientPhone" required placeholder="Ex: (43) 99999-9999" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Município do Local da Obra *</label>
+                            <input type="text" id="workCity" required placeholder="Ex: São João do Ivaí - PR" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Tipo de Serviço Desejado *</label>
+                            <select id="serviceType" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand-500 transition-colors">
+                                <option value="Perfuração de Brocas para Fundação">Perfuração de Brocas para Fundação</option>
+                                <option value="Construção de Casa (Geral)">Construção de Casa (Geral)</option>
+                                <option value="Prédio Residencial ou Comercial">Prédio Residencial ou Comercial</option>
+                                <option value="Outro Serviço de Construção">Outro Serviço de Construção</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Quantidade e Dimensão das Brocas *</label>
+                            <input type="text" id="drillInfo" required placeholder="Ex: 24 brocas de 25cm x 3 metros" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                            <span class="text-xs text-slate-400 mt-1 block">Informe a quantidade e o diâmetro/profundidade aproximados.</span>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Data Prevista para Início do Serviço *</label>
+                            <input type="date" id="workDate" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-2">Observações Adicionais (Opcional)</label>
+                        <textarea id="workNotes" rows="3" placeholder="Detalhes sobre o terreno, projeto ou outras necessidades..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-emerald-600/30 flex items-center justify-center gap-3 text-lg transition-all hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Orçamento Direto para o WhatsApp
+                        </button>
+                        <p class="text-center text-xs text-slate-400 mt-3">
+                            Ao clicar, você será redirecionado para o WhatsApp de Carlinho Ceron ((43) 9 9920-3034) com todos os dados preenchidos.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-slate-900 font-extrabold text-lg">
+                            <i class="fa-solid fa-hard-hat"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">C Alves Ceron Construções</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Solidez, qualidade e profissionalismo em construções em geral e perfuração de brocas para fundações.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://wa.me/5543999203034" target="_blank" class="w-10 h-10 bg-slate-900 hover:bg-emerald-600 text-slate-300 hover:text-white rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="#orcamento" class="w-10 h-10 bg-slate-900 hover:bg-brand-500 text-slate-300 hover:text-slate-950 rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fa-solid fa-calculator text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-bold text-white">Contato Direto</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-brand-500">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <span>(43) 9 9920-3034</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <span>Proprietário: Carlinho Ceron</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span>São João do Ivaí - PR</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-bold text-white">Serviços Principais</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#servicos" class="hover:text-brand-500 transition-colors">Perfuração de Brocas para Fundações</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-500 transition-colors">Construção de Prédios Residenciais</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-500 transition-colors">Construção de Prédios Comerciais</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-500 transition-colors">Casas e Construção em Geral</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 C Alves Ceron Construções. Todos os direitos reservados.</p>
+                <p>São João do Ivaí - Paraná</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // WhatsApp Quote Form Handler
+        const quoteForm = document.getElementById('quoteForm');
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('clientName').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+            const city = document.getElementById('workCity').value.trim();
+            const service = document.getElementById('serviceType').value;
+            const drillInfo = document.getElementById('drillInfo').value.trim();
+            const date = document.getElementById('workDate').value;
+            const notes = document.getElementById('workNotes').value.trim();
+
+            // Format date to DD/MM/YYYY if possible
+            let formattedDate = date;
+            if (date) {
+                const parts = date.split('-');
+                if (parts.length === 3) {
+                    formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
+                }
+            }
+
+            // Build WhatsApp formatted message
+            let message = `Olá, meu nome é *${name}* (Tel: ${phone}).\n\n`;
+            message += `Gostaria de solicitar um orçamento para:\n`;
+            message += `🏗️ *Serviço:* ${service}\n`;
+            message += `📍 *Município da Obra:* ${city}\n`;
+            message += `⚙️ *Brocas / Fundação:* ${drillInfo}\n`;
+            message += `📅 *Data Prevista:* ${formattedDate}\n`;
+            
+            if (notes) {
+                message += `📝 *Observações:* ${notes}\n`;
+            }
+
+            message += `\nPode me retornar para conversarmos sobre os detalhes?`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/5543999203034?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
