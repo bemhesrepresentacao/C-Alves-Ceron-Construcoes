@@ -1,37 +1,559 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeria de Obras | C Alves Ceron Construções</title>
-<meta name="description" content="Galeria de obras da C Alves Ceron Construções: casas, prédios, fundações e construções em geral.">
-<link rel="icon" href="Logo%20CA%20Constru%C3%A7%C3%B5es.png" type="image/png">
-<script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script>tailwind.config={theme:{extend:{colors:{brand:{500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','sans-serif']}}}};</script>
-<style>body{font-family:Inter,sans-serif}.filter-btn.active{background:#f59e0b;color:#020617;border-color:#f59e0b}.project-card{transition:transform .2s,box-shadow .2s}.project-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #0005}.gallery-image{cursor:zoom-in}#lightbox[hidden]{display:none}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Obras | C Alves Ceron Construções</title>
+    <link rel="icon" href="Logo CA Construções.png" type="image/png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
-<header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur border-b border-slate-800"><div class="max-w-7xl mx-auto px-4 sm:px-6 min-h-20 flex items-center justify-between gap-4">
-<a href="index.html#inicio" class="flex items-center gap-3"><img src="Logo%20CA%20Constru%C3%A7%C3%B5es.png" alt="Logo C Alves Ceron" class="w-12 h-12 rounded-xl object-cover border border-amber-500/40" onerror="this.style.display='none'"><span><b class="block font-black">C ALVES CERON</b><small class="text-amber-400 uppercase tracking-wider">Construções &amp; Fundações</small></span></a>
-<nav class="hidden md:flex items-center gap-6 text-sm text-slate-300"><a href="index.html#inicio" class="hover:text-amber-400">Início</a><a href="index.html#sobre" class="hover:text-amber-400">Sobre Nós</a><a href="index.html#servicos" class="hover:text-amber-400">Serviços</a><a href="galeria.html" class="text-amber-400 border-b-2 border-amber-400 py-2">Galeria de Obras</a><a href="index.html#contato" class="hover:text-amber-400">Contato</a></nav>
-<a href="https://wa.me/5543999095741?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-4 py-3 rounded-xl font-extrabold text-sm"><i class="fa-brands fa-whatsapp mr-2"></i>Solicitar orçamento</a></div><div class="md:hidden flex gap-5 overflow-x-auto px-4 py-3 border-t border-slate-800 text-sm whitespace-nowrap"><a href="index.html#inicio">Início</a><a href="index.html#servicos">Serviços</a><a href="galeria.html" class="text-amber-400">Galeria</a><a href="index.html#contato">Contato</a></div></header>
-<main><section class="border-b border-slate-800 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24"><p class="text-amber-400 uppercase tracking-widest text-sm font-extrabold mb-3">Nosso trabalho em imagens</p><h1 class="text-4xl sm:text-6xl font-black">Galeria de <span class="text-amber-400">Obras</span></h1><p class="mt-5 text-slate-300 max-w-2xl">Conheça projetos, etapas de execução e serviços. Filtre por categoria ou pesquise pelo cliente, nome da obra ou município.</p><a href="index.html#orcamento" class="inline-flex mt-7 items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-3 rounded-xl font-extrabold"><i class="fa-solid fa-calculator"></i> Solicitar orçamento</a></div></section>
-<section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14"><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-7"><div><h2 class="text-2xl sm:text-3xl font-black">Projetos e serviços</h2><p class="text-slate-400 text-sm mt-2">Escolha uma categoria ou pesquise abaixo.</p></div><label class="w-full lg:max-w-sm flex items-center gap-3 bg-slate-900 border border-slate-700 rounded-xl px-4"><i class="fa-solid fa-magnifying-glass text-slate-400"></i><input id="gallerySearch" type="search" placeholder="Cliente, obra ou município..." class="w-full bg-transparent py-3 outline-none"></label></div>
-<div id="filters" class="flex flex-wrap gap-2 mb-8"><button class="filter-btn active border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="todos">Todas as obras</button><button class="filter-btn border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="casas">Casas</button><button class="filter-btn border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="predios-residenciais">Prédios residenciais</button><button class="filter-btn border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="predios-comerciais">Prédios comerciais</button><button class="filter-btn border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="fundacoes">Fundações / Brocas</button><button class="filter-btn border border-slate-700 rounded-full px-4 py-2 text-sm font-bold" data-filter="obras-gerais">Obras em geral</button></div>
-<!-- CADASTRO: copie um article para cada obra. Para várias fotos da mesma obra, adicione mais figures dentro do mesmo article. Substitua fotos, nomes e descrições pelos dados reais. -->
-<div id="projectGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<article class="project-card rounded-2xl overflow-hidden bg-slate-900 border border-slate-800" data-category="casas" data-search="cliente demonstrativo residência casas mandaguari"><figure><img class="gallery-image w-full h-60 object-cover bg-slate-800" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Foto ilustrativa de residência moderna" loading="lazy" data-title="Residência — exemplo" data-caption="Imagem ilustrativa: substitua pela foto real da obra."><figcaption class="p-5"><p class="text-xs font-bold uppercase text-amber-400 mb-2">Casas · Cliente demonstrativo</p><h3 class="text-lg font-extrabold">Residência — projeto demonstrativo</h3><p class="text-sm text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Município a informar</p><p class="text-sm text-slate-300 leading-relaxed mt-3">Descreva os serviços executados, as etapas realizadas e os detalhes que deseja destacar.</p></figcaption></figure></article>
-<article class="project-card rounded-2xl overflow-hidden bg-slate-900 border border-slate-800" data-category="fundacoes" data-search="cliente demonstrativo fundação brocas são joão do ivaí"><figure><img class="gallery-image w-full h-60 object-cover bg-slate-800" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="Foto ilustrativa de obra em execução" loading="lazy" data-title="Fundações e brocas — exemplo" data-caption="Imagem ilustrativa: substitua pela foto real da obra."><figcaption class="p-5"><p class="text-xs font-bold uppercase text-amber-400 mb-2">Fundações / Brocas · Cliente demonstrativo</p><h3 class="text-lg font-extrabold">Fundações e perfuração de brocas</h3><p class="text-sm text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Município a informar</p><p class="text-sm text-slate-300 leading-relaxed mt-3">Descreva o tipo de fundação, o serviço executado e a etapa fotografada.</p></figcaption></figure></article>
-<article class="project-card rounded-2xl overflow-hidden bg-slate-900 border border-slate-800" data-category="predios-residenciais" data-search="cliente demonstrativo edifício prédio residencial maringá"><figure><img class="gallery-image w-full h-60 object-cover bg-slate-800" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Foto ilustrativa de edifício residencial" loading="lazy" data-title="Edifício residencial — exemplo" data-caption="Imagem ilustrativa: substitua pela foto real da obra."><figcaption class="p-5"><p class="text-xs font-bold uppercase text-amber-400 mb-2">Prédios residenciais · Cliente demonstrativo</p><h3 class="text-lg font-extrabold">Edifício residencial</h3><p class="text-sm text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Município a informar</p><p class="text-sm text-slate-300 leading-relaxed mt-3">Apresente os serviços realizados e as informações autorizadas pelo cliente.</p></figcaption></figure></article>
-<article class="project-card rounded-2xl overflow-hidden bg-slate-900 border border-slate-800" data-category="predios-comerciais" data-search="cliente demonstrativo prédio comercial loja"><figure><img class="gallery-image w-full h-60 object-cover bg-slate-800" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Foto ilustrativa de prédio comercial" loading="lazy" data-title="Edificação comercial — exemplo" data-caption="Imagem ilustrativa: substitua pela foto real da obra."><figcaption class="p-5"><p class="text-xs font-bold uppercase text-amber-400 mb-2">Prédios comerciais · Cliente demonstrativo</p><h3 class="text-lg font-extrabold">Edificação comercial</h3><p class="text-sm text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Município a informar</p><p class="text-sm text-slate-300 leading-relaxed mt-3">Informe a finalidade do edifício e as características do serviço executado.</p></figcaption></figure></article>
-<article class="project-card rounded-2xl overflow-hidden bg-slate-900 border border-slate-800" data-category="obras-gerais" data-search="cliente demonstrativo obra geral estrutura cobertura"><figure><img class="gallery-image w-full h-60 object-cover bg-slate-800" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Foto ilustrativa de projeto de construção" loading="lazy" data-title="Construção em geral — exemplo" data-caption="Imagem ilustrativa: substitua pela foto real da obra."><figcaption class="p-5"><p class="text-xs font-bold uppercase text-amber-400 mb-2">Obras em geral · Cliente demonstrativo</p><h3 class="text-lg font-extrabold">Construção em geral</h3><p class="text-sm text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Município a informar</p><p class="text-sm text-slate-300 leading-relaxed mt-3">Mostre estruturas, ampliações, reformas ou outras etapas do trabalho.</p></figcaption></figure></article>
-<p id="noResults" class="hidden sm:col-span-2 lg:col-span-3 text-center text-slate-400 py-12">Nenhuma obra encontrada. Tente outra categoria ou palavra-chave.</p></div><p class="text-xs text-slate-500 mt-6">As imagens e descrições acima são ilustrativas. Substitua-as por fotos reais e obtenha autorização antes de divulgar imagens de clientes ou propriedades.</p></section>
-<section class="border-t border-slate-800 bg-slate-900"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 flex flex-col md:flex-row justify-between gap-5"><div><p class="text-amber-400 text-xs font-extrabold uppercase tracking-widest">Vamos conversar?</p><h2 class="text-2xl sm:text-3xl font-black mt-2">Tem um projeto em mente?</h2><p class="text-slate-300 mt-2">Entre em contato para conversar sobre sua obra e solicitar um orçamento.</p></div><a href="https://wa.me/5543999095741?text=Ol%C3%A1%2C%20vi%20a%20galeria%20de%20obras%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="self-start bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-4 rounded-xl font-extrabold"><i class="fa-brands fa-whatsapp mr-2"></i>Enviar mensagem</a></div></section></main>
-<footer class="border-t border-slate-800"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400"><strong class="text-white">C Alves Ceron Construções · São João do Ivaí - PR</strong><a href="https://wa.me/5543999095741" class="hover:text-amber-400" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp mr-2"></i>(43) 9 9909-5741</a><span>© 2026 C Alves Ceron Construções.</span></div></footer>
-<div id="lightbox" hidden class="fixed inset-0 z-50 bg-black/90 p-4 sm:p-8 items-center justify-center" role="dialog" aria-modal="true" aria-label="Visualização ampliada da foto"><button id="closeLightbox" class="absolute top-4 right-4 text-white text-3xl p-2" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button><div class="max-w-5xl w-full max-h-full flex flex-col items-center"><img id="lightboxImage" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-xl"><h3 id="lightboxTitle" class="text-white text-xl font-extrabold mt-4 text-center"></h3><p id="lightboxCaption" class="text-slate-300 text-sm mt-2 text-center"></p></div></div>
-<script>
-const buttons=[...document.querySelectorAll('.filter-btn')],cards=[...document.querySelectorAll('.project-card')],search=document.getElementById('gallerySearch'),empty=document.getElementById('noResults');let filter='todos';
-function applyFilters(){const q=search.value.trim().toLocaleLowerCase('pt-BR');let count=0;cards.forEach(c=>{const ok=(filter==='todos'||c.dataset.category===filter)&&(c.dataset.search+' '+c.innerText).toLocaleLowerCase('pt-BR').includes(q);c.classList.toggle('hidden',!ok);if(ok)count++});empty.classList.toggle('hidden',count!==0)}
-buttons.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;buttons.forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')});applyFilters()}));search.addEventListener('input',applyFilters);
-const box=document.getElementById('lightbox'),big=document.getElementById('lightboxImage');function closeBox(){box.hidden=true;box.classList.remove('flex');big.src='';document.body.style.overflow=''}
-document.querySelectorAll('.gallery-image').forEach(img=>img.addEventListener('click',()=>{big.src=img.src;big.alt=img.alt;document.getElementById('lightboxTitle').textContent=img.dataset.title||img.alt;document.getElementById('lightboxCaption').textContent=img.dataset.caption||'';box.hidden=false;box.classList.add('flex');document.body.style.overflow='hidden';document.getElementById('closeLightbox').focus()}));document.getElementById('closeLightbox').addEventListener('click',closeBox);box.addEventListener('click',e=>{if(e.target===box)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)closeBox()});
-</script></body></html>
+
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- HEADER / MENU -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.htm" class="flex items-center gap-3 group">
+                <img src="Logo CA Construções.png" alt="C Alves Ceron Logo" class="w-12 h-12 rounded-xl object-cover border border-amber-500/40 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/100x100/111827/f59e0b?text=CAC';">
+                <div>
+                    <span class="text-base font-black tracking-tight block leading-tight text-white">C ALVES CERON</span>
+                    <span class="text-[11px] text-amber-400 font-semibold uppercase tracking-wider">Construções & Fundações</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="index.htm#inicio" class="hover:text-amber-400 transition-colors">Início</a>
+                <a href="index.htm#sobre" class="hover:text-amber-400 transition-colors">Sobre Nós</a>
+                <a href="index.htm#servicos" class="hover:text-amber-400 transition-colors">Serviços</a>
+                <a href="galeria.html" class="text-amber-400 font-bold transition-colors">Galeria de Obras</a>
+                <a href="index.htm#orcamento" class="hover:text-amber-400 transition-colors">Orçamento Online</a>
+                <a href="index.htm#contato" class="hover:text-amber-400 transition-colors">Contato</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <button onclick="openAdminModal()" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2 transition-all">
+                    <i class="fa-solid fa-lock"></i> Painel Admin
+                </button>
+                <a href="https://wa.me/5543999095741?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm flex items-center gap-2 shadow-lg shadow-emerald-600/25 transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> (43) 9 9909-5741
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl">
+            <a href="index.htm#inicio" class="block text-base font-medium hover:text-amber-400 transition-colors">Início</a>
+            <a href="index.htm#sobre" class="block text-base font-medium hover:text-amber-400 transition-colors">Sobre Nós</a>
+            <a href="index.htm#servicos" class="block text-base font-medium hover:text-amber-400 transition-colors">Serviços</a>
+            <a href="galeria.html" class="block text-base font-bold text-amber-400 transition-colors">Galeria de Obras</a>
+            <a href="index.htm#orcamento" class="block text-base font-medium hover:text-amber-400 transition-colors">Orçamento Online</a>
+            <a href="index.htm#contato" class="block text-base font-medium hover:text-amber-400 transition-colors">Contato</a>
+            <div class="pt-2 space-y-2">
+                <button onclick="openAdminModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 px-4 py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i> Painel Administrativo
+                </button>
+                <a href="https://wa.me/5543999095741?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp (43) 9 9909-5741
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION DA GALERIA -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-images"></i> Portfólio de Obras
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-black tracking-tight">
+                Galeria de Trabalhos & Execuções
+            </h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+                Explore registros de nossas fundações, residências, prédios residenciais e comerciais realizados em São João do Ivaí e região sob a supervisão de Carlinho Ceron.
+            </p>
+        </div>
+    </section>
+
+    <!-- FILTROS E CONTEÚDO -->
+    <section class="py-12 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <!-- Barra de Filtros -->
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+                
+                <!-- Filtros por Categoria -->
+                <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2 w-full lg:w-auto mb-2 lg:mb-0">Serviço:</span>
+                    <button onclick="filterCategory('todos')" id="btn-cat-todos" class="category-btn bg-amber-500 text-slate-950 px-4 py-2 rounded-xl text-xs font-bold transition-all">Todos</button>
+                    <button onclick="filterCategory('Fundação')" id="btn-cat-Fundação" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition-all">Fundações</button>
+                    <button onclick="filterCategory('Residencial')" id="btn-cat-Residencial" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition-all">Residencial</button>
+                    <button onclick="filterCategory('Comercial')" id="btn-cat-Comercial" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition-all">Comercial</button>
+                    <button onclick="filterCategory('Construção')" id="btn-cat-Construção" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition-all">Construção em Geral</button>
+                </div>
+
+                <!-- Filtro por Cliente/Obra (Busca) -->
+                <div class="w-full lg:w-80 relative">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">
+                        <i class="fa-solid fa-search"></i>
+                    </span>
+                    <input type="text" id="searchClient" onkeyup="filterPhotos()" placeholder="Filtrar por cliente ou obra..." class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-11 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors">
+                </div>
+            </div>
+
+            <!-- Grid de Fotos -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- As fotos são carregadas via JavaScript dinamicamente (com suporte ao LocalStorage) -->
+            </div>
+
+            <!-- Mensagem se vazio -->
+            <div id="noResults" class="hidden text-center py-16 space-y-4">
+                <div class="text-amber-400 text-4xl"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h3 class="text-lg font-bold text-white">Nenhuma foto encontrada</h3>
+                <p class="text-slate-400 text-sm">Tente ajustar seus filtros de busca ou cadastre novas fotos pelo painel administrativo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL LIGHTBOX PARA AMPLIAR FOTO -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-slate-950/80 hover:bg-amber-500 text-white hover:text-slate-950 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="max-h-[70vh] bg-slate-950 flex items-center justify-center overflow-hidden">
+                <img id="lightboxImg" src="" alt="Ampliada" class="max-h-[70vh] w-auto object-contain">
+            </div>
+            <div class="p-6 space-y-2">
+                <div class="flex items-center justify-between">
+                    <span id="lightboxCategory" class="bg-amber-500 text-slate-950 px-3 py-1 rounded-lg text-xs font-black uppercase"></span>
+                    <span id="lightboxClient" class="text-amber-400 text-xs font-bold"><i class="fa-solid fa-user-tag"></i> <span></span></span>
+                </div>
+                <h3 id="lightboxTitle" class="text-xl font-black text-white"></h3>
+                <p id="lightboxDesc" class="text-slate-300 text-sm"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE LOGIN ADMIN -->
+    <div id="adminLoginModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-md w-full space-y-6 shadow-2xl relative">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-2xl flex items-center justify-center mx-auto text-xl">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">Área Administrativa</h3>
+                <p class="text-xs text-slate-400">Insira a senha de acesso para gerenciar o cadastro de fotos.</p>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Senha de Acesso</label>
+                    <input type="password" id="adminPassword" required placeholder="Digite a senha..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 rounded-xl transition-all shadow-md text-sm">
+                    Entrar no Painel
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PAINEL ADMINISTRATIVO (CADASTRO DE FOTOS) -->
+    <div id="adminPanelModal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-2xl w-full space-y-6 shadow-2xl relative my-8">
+            <button onclick="closeAdminPanel()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div>
+                    <h3 class="text-2xl font-black text-white">Painel de Cadastro de Fotos</h3>
+                    <p class="text-xs text-amber-400">Gerencie as obras e serviços exibidos na galeria</p>
+                </div>
+                <button onclick="logoutAdmin()" class="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-1.5 rounded-xl text-xs font-bold">
+                    Sair
+                </button>
+            </div>
+
+            <form id="photoForm" onsubmit="savePhoto(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Título da Obra / Foto *</label>
+                        <input type="text" id="photoTitle" required placeholder="Ex: Prédio Residencial Centro" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Cliente / Nome da Obra *</label>
+                        <input type="text" id="photoClient" required placeholder="Ex: Residencial Silva" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Tipo de Serviço (Categoria) *</label>
+                        <select id="photoCategory" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option value="Fundação">Fundação / Perfuração de Brocas</option>
+                            <option value="Residencial">Prédio Residencial / Casas</option>
+                            <option value="Comercial">Prédio Comercial</option>
+                            <option value="Construção">Construção em Geral</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">URL da Imagem ou Arquivo *</label>
+                        <input type="text" id="photoUrl" required placeholder="Cole o link da foto (ex: https://...)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Descrição Detalhada</label>
+                    <textarea id="photoDesc" rows="2" placeholder="Detalhes sobre a execução da obra..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition-all shadow-md text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Cadastrar Nova Foto na Galeria
+                </button>
+            </form>
+
+            <div class="pt-4 border-t border-slate-800">
+                <h4 class="font-bold text-sm text-white mb-3">Fotos Cadastradas (Gerenciar / Excluir)</h4>
+                <div id="adminPhotoList" class="space-y-2 max-h-48 overflow-y-auto pr-2">
+                    <!-- Lista dinâmica de exclusão -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-900">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="Logo CA Construções.png" alt="C Alves Ceron Logo" class="w-10 h-10 rounded-xl object-cover border border-amber-500/40">
+                        <span class="text-base font-black tracking-tight">C Alves Ceron Construções</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Solidez, qualidade e profissionalismo em construções em geral e perfuração de brocas para fundações em São João do Ivaí e região.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-bold text-white">Contato Direto</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-amber-400">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <span>(43) 9 9909-5741</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-amber-400">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <span>Proprietário: Carlos Alves Ceron</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-base font-bold text-white">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.htm#inicio" class="hover:text-amber-400 transition-colors">Início</a></li>
+                        <li><a href="index.htm#servicos" class="hover:text-amber-400 transition-colors">Serviços e Especialidades</a></li>
+                        <li><a href="galeria.html" class="hover:text-amber-400 transition-colors">Galeria de Obras</a></li>
+                        <li><a href="index.htm#orcamento" class="hover:text-amber-400 transition-colors">Orçamento Online</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 C Alves Ceron Construções. Todos os direitos reservados.</p>
+                <p>São João do Ivaí - Paraná | Gestão: Carlinho Ceron</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DA GALERIA E ADMIN -->
+    <script>
+        // Dados iniciais padrão da galeria caso o LocalStorage esteja vazio
+        const defaultPhotos = [
+            {
+                id: 1,
+                title: "Perfuração de Brocas para Fundação",
+                client: "Obra Residencial Centro",
+                category: "Fundação",
+                url: "perfuracao-brocas.jpg",
+                desc: "Execução de perfuração de brocas com gabarito e precisão para fundação segura."
+            },
+            {
+                id: 2,
+                title: "Construção de Casa Residencial",
+                client: "Família Ceron",
+                category: "Residencial",
+                url: "casas-construcao.jpg",
+                desc: "Estrutura completa alvenaria e acabamentos em São João do Ivaí."
+            },
+            {
+                id: 3,
+                title: "Prédio Residencial Múltiplos Pavimentos",
+                client: "Edifício São João",
+                category: "Residencial",
+                url: "Predios-residenciais.jpg",
+                desc: "Execução estrutural de edifício residencial com rigor técnico e prazos cumpridos."
+            },
+            {
+                id: 4,
+                title: "Prédio Comercial",
+                client: "Galeria Comercial Ivaí",
+                category: "Comercial",
+                url: "Predios-comerciais.jpg",
+                desc: "Obra comercial com amplo espaço térreo e salas moduladas."
+            }
+        ];
+
+        // Carregar fotos do localStorage ou usar padrão
+        function getPhotos() {
+            const stored = localStorage.getItem('cac_gallery_photos');
+            if (!stored) {
+                localStorage.setItem('cac_gallery_photos', JSON.stringify(defaultPhotos));
+                return defaultPhotos;
+            }
+            return JSON.parse(stored);
+        }
+
+        let currentCategory = 'todos';
+
+        // Renderizar Galeria
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            const noResults = document.getElementById('noResults');
+            const searchTerm = document.getElementById('searchClient').value.toLowerCase();
+            const photos = getPhotos();
+
+            grid.innerHTML = '';
+
+            const filtered = photos.filter(p => {
+                const matchCat = currentCategory === 'todos' || p.category === currentCategory;
+                const matchSearch = p.client.toLowerCase().includes(searchTerm) || p.title.toLowerCase().includes(searchTerm) || p.desc.toLowerCase().includes(searchTerm);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                filtered.forEach(photo => {
+                    const card = document.createElement('div');
+                    card.className = "bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl group hover:border-amber-500/50 transition-all flex flex-col justify-between";
+                    card.innerHTML = `
+                        <div class="relative h-64 overflow-hidden bg-slate-950 cursor-pointer" onclick="openLightbox('${photo.url}', '${photo.title.replace(/'/g, "\\'")}', '${photo.client.replace(/'/g, "\\'")}', '${photo.category}', '${photo.desc.replace(/'/g, "\\'")}')">
+                            <img src="${photo.url}" alt="${photo.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/f59e0b?text=Obra+CAC';">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-amber-500 text-slate-950 px-3 py-1 rounded-lg text-xs font-black uppercase shadow-lg">
+                                    ${photo.category}
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs text-amber-300 font-bold flex items-center gap-1.5"><i class="fa-solid fa-expand"></i> Clique para ampliar</span>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                            <div class="space-y-1">
+                                <div class="text-xs text-amber-400 font-bold flex items-center gap-1.5">
+                                    <i class="fa-solid fa-user-tag"></i> <span>${photo.client}</span>
+                                </div>
+                                <h3 class="text-lg font-black text-white">${photo.title}</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed">${photo.desc}</p>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+        }
+
+        // Filtro por Categoria
+        function filterCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.className = "category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition-all";
+            });
+            const activeBtn = document.getElementById(`btn-cat-${cat}`) || document.getElementById('btn-cat-todos');
+            activeBtn.className = "category-btn bg-amber-500 text-slate-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md";
+            renderGallery();
+        }
+
+        // Filtro por busca
+        function filterPhotos() {
+            renderGallery();
+        }
+
+        // Lightbox
+        function openLightbox(url, title, client, category, desc) {
+            document.getElementById('lightboxImg').src = url;
+            document.getElementById('lightboxTitle').innerText = title;
+            document.getElementById('lightboxClient').querySelector('span').innerText = client;
+            document.getElementById('lightboxCategory').innerText = category;
+            document.getElementById('lightboxDesc').innerText = desc;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        // Controle Admin
+        const ADMIN_PASS = "ceron2026"; // Senha padrão (pode alterar aqui)
+
+        function openAdminModal() {
+            const isAuth = sessionStorage.getItem('cac_auth');
+            if (isAuth === 'true') {
+                openAdminPanel();
+            } else {
+                document.getElementById('adminLoginModal').classList.remove('hidden');
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const pass = document.getElementById('adminPassword').value;
+            if (pass === ADMIN_PASS) {
+                sessionStorage.setItem('cac_auth', 'true');
+                closeAdminModal();
+                openAdminPanel();
+                document.getElementById('adminPassword').value = '';
+            } else {
+                alert('Senha incorreta! Tente novamente.');
+            }
+        }
+
+        function logoutAdmin() {
+            sessionStorage.removeItem('cac_auth');
+            closeAdminPanel();
+            alert('Você saiu do painel administrativo.');
+        }
+
+        function openAdminPanel() {
+            document.getElementById('adminPanelModal').classList.remove('hidden');
+            renderAdminPhotoList();
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminPanelModal').classList.add('hidden');
+            renderGallery();
+        }
+
+        function savePhoto(e) {
+            e.preventDefault();
+            const title = document.getElementById('photoTitle').value.trim();
+            const client = document.getElementById('photoClient').value.trim();
+            const category = document.getElementById('photoCategory').value;
+            const url = document.getElementById('photoUrl').value.trim();
+            const desc = document.getElementById('photoDesc').value.trim();
+
+            const photos = getPhotos();
+            const newPhoto = {
+                id: Date.now(),
+                title,
+                client,
+                category,
+                url,
+                desc
+            };
+
+            photos.unshift(newPhoto);
+            localStorage.setItem('cac_gallery_photos', JSON.stringify(photos));
+
+            document.getElementById('photoForm').reset();
+            alert('Foto cadastrada com sucesso!');
+            renderAdminPhotoList();
+            renderGallery();
+        }
+
+        function renderAdminPhotoList() {
+            const listContainer = document.getElementById('adminPhotoList');
+            const photos = getPhotos();
+            listContainer.innerHTML = '';
+
+            if (photos.length === 0) {
+                listContainer.innerHTML = '<p class="text-xs text-slate-500">Nenhuma foto cadastrada.</p>';
+                return;
+            }
+
+            photos.forEach(p => {
+                const item = document.createElement('div');
+                item.className = "flex items-center justify-between bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs";
+                item.innerHTML = `
+                    <div class="flex items-center gap-3 truncate">
+                        <img src="${p.url}" class="w-10 h-10 object-cover rounded-lg" onerror="this.src='https://placehold.co/100x100/111827/f59e0b?text=CAC'">
+                        <div class="truncate">
+                            <p class="font-bold text-white truncate">${p.title}</p>
+                            <p class="text-amber-400">Cliente: ${p.client} | [${p.category}]</p>
+                        </div>
+                    </div>
+                    <button onclick="deletePhoto(${p.id})" class="bg-red-500/10 hover:bg-red-500 text-red-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors font-bold ml-2">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                `;
+                listContainer.appendChild(item);
+            });
+        }
+
+        function deletePhoto(id) {
+            if (confirm('Deseja realmente excluir esta foto da galeria?')) {
+                let photos = getPhotos();
+                photos = photos.filter(p => p.id !== id);
+                localStorage.setItem('cac_gallery_photos', JSON.stringify(photos));
+                renderAdminPhotoList();
+                renderGallery();
+            }
+        }
+
+        // Inicializar galeria ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGallery();
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
