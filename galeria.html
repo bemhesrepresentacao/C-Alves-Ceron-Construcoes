@@ -11,6 +11,8 @@
     .gold{color:#fbbf24}.bg-gold{background:#fbbf24;color:#020617}
     .photo{aspect-ratio:4/3;object-fit:cover;width:100%;background:#0f172a}
   </style>
+  <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <header class="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/95 backdrop-blur">
@@ -36,7 +38,11 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+            <button id="mobile-menu-btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menu"
+        class="md:hidden text-2xl text-slate-300 hover:text-white">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -137,6 +143,22 @@ document.querySelector("#reset").addEventListener("click",()=>{search.value="";c
 document.querySelector("#closeLightbox").addEventListener("click",closeBox);
 document.querySelector("#lightbox").addEventListener("click",e=>{if(e.target.id==="lightbox")closeBox();});
 function closeBox(){const x=document.querySelector("#lightbox");x.classList.add("hidden");x.classList.remove("flex");}
+  
+const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+const mobileMenu = document.querySelector("#mobile-menu");
+
+mobileMenuBtn.addEventListener("click", () => {
+  const isHidden = mobileMenu.classList.toggle("hidden");
+  mobileMenuBtn.setAttribute("aria-expanded", String(!isHidden));
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    mobileMenuBtn.setAttribute("aria-expanded", "false");
+  });
+});
+
 </script>
 </body>
 </html>
